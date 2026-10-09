@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827">
+<title>CloudQuest: Summer 2027</title>
+<style>
+:root{--bg:#0b1120;--panel:#121c2e;--panel2:#18253a;--text:#edf3ff;--muted:#a9b7ce;--accent:#70e1c1;--accent2:#8db5ff;--line:#2b3b54;--good:#78e0a4;--bad:#ff9b9b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#172846 0%,var(--bg) 58%);color:var(--text);font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+.wrap{width:min(100% - 28px,1000px);margin:0 auto;padding:24px 0 48px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:22px}.brand{display:flex;gap:12px;align-items:center}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#071322;font-size:25px;font-weight:900}.eyebrow{color:var(--accent);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.brand h1{font-size:1.35rem;margin:0}.muted{color:var(--muted)}.pill{border:1px solid var(--line);border-radius:99px;padding:7px 12px;color:var(--muted);font-size:.86rem}.hero,.card{background:linear-gradient(145deg,rgba(24,37,58,.96),rgba(16,26,43,.96));border:1px solid var(--line);border-radius:22px;padding:clamp(18px,4vw,28px);box-shadow:0 12px 35px #0002}.hero{display:grid;grid-template-columns:1.4fr .8fr;gap:24px;align-items:center}.hero h2{font-size:clamp(1.8rem,5vw,3rem);line-height:1.08;margin:8px 0 12px;letter-spacing:-.04em}.hero p{max-width:58ch;color:var(--muted)}.hero-art{min-height:190px;border-radius:18px;background:linear-gradient(135deg,#1c3b50,#29315b);display:grid;place-items:center;font-size:clamp(4rem,10vw,7rem);position:relative;overflow:hidden}.hero-art:after{content:"";position:absolute;width:220px;height:220px;border:1px solid #ffffff25;border-radius:50%;box-shadow:0 0 0 28px #ffffff08,0 0 0 56px #ffffff05}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0 24px}.stat{background:#121c2e;border:1px solid var(--line);border-radius:15px;padding:13px}.stat small{display:block;color:var(--muted);font-size:.78rem}.stat strong{font-size:1.35rem}.layout{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 15px}.section-title h3{margin:0;font-size:1.15rem}.mission-list{display:grid;gap:10px}.mission{width:100%;text-align:left;background:#0e1727;color:var(--text);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;gap:12px;align-items:flex-start;cursor:pointer}.mission.active{border-color:var(--accent);background:#153044}.mission.done .number{background:#225d4b;color:#c9ffeb}.number{flex:none;width:35px;height:35px;border-radius:11px;background:var(--panel2);display:grid;place-items:center;font-weight:800}.mission b{display:block}.mission small{color:var(--muted);display:block;margin-top:3px}.tag{font-size:.72rem;color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.08em}.challenge h3{font-size:1.35rem;margin:6px 0}.challenge p{color:var(--muted)}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#070d17;border:1px solid var(--line);border-radius:12px;padding:13px;color:#d9f5ff;font: .9rem/1.5 ui-monospace,SFMono-Regular,Consolas,monospace}.options{display:grid;gap:9px;margin:16px 0}.option{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:12px;cursor:pointer;background:#0e1727}.option:has(input:checked){border-color:var(--accent);background:#143044}.option input{margin-top:5px;accent-color:var(--accent)}button,.btn{font:inherit;border:0;border-radius:12px;padding:11px 15px;cursor:pointer;font-weight:750}.primary{background:var(--accent);color:#071720}.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}button:disabled{opacity:.4;cursor:not-allowed}.actions{display:flex;gap:9px;flex-wrap:wrap}.feedback{border-radius:12px;padding:13px;margin-top:13px}.feedback.good{background:#153b32;border:1px solid #286a55}.feedback.bad{background:#3c2029;border:1px solid #75404b}.hint{color:#f7d994;background:#332b1c;border:1px solid #5d4b2b;border-radius:12px;padding:12px;margin:12px 0}.bar{height:8px;border-radius:99px;background:#0a1120;overflow:hidden;margin-top:8px}.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0;transition:width .25s}.roadmap{display:grid;gap:11px}.roadmap-item{display:flex;gap:10px}.roadmap-item .dot{color:var(--accent);font-weight:900}.footer{color:var(--muted);font-size:.82rem;text-align:center;margin-top:22px}.small{font-size:.88rem}.hidden{display:none!important}
+@media(max-width:760px){.hero,.layout{grid-template-columns:1fr}.hero-art{min-height:130px}.stats{grid-template-columns:repeat(2,1fr)}.wrap{width:min(100% - 20px,1000px);padding-top:14px}.top{align-items:flex-start}.hero-art{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand"><div class="logo">CQ</div><div><div class="eyebrow">Career skills RPG</div><h1>CloudQuest: Summer 2027</h1></div></div>
+  <div class="pill">● Saves progress on this device</div>
+</header>
+<section class="hero">
+  <div><div class="eyebrow">Your next chapter starts here</div><h2>Build skills.<br>Beat the interview.</h2><p>Practice the technical foundations behind cloud, networking, software engineering, data analytics, and cybersecurity internships. Complete missions, earn XP, and build portfolio-ready projects.</p><div class="actions"><button class="primary" id="continueBtn">Continue mission →</button><button class="secondary" id="resetBtn">Reset progress</button></div></div>
+  <div class="hero-art" aria-hidden="true">⌘</div>
+</section>
+<section class="stats">
+  <div class="stat"><small>LEVEL</small><strong id="level">1</strong></div>
+  <div class="stat"><small>TOTAL XP</small><strong id="xp">0</strong></div>
+  <div class="stat"><small>MISSIONS CLEARED</small><strong id="cleared">0 / 8</strong></div>
+  <div class="stat"><small>COMPLETION</small><strong id="completion">0%</strong><div class="bar"><span id="progressBar"></span></div></div>
+</section>
+<div class="layout">
+  <section class="card">
+    <div class="section-title"><h3>Mission map</h3><span class="tag">8 missions</span></div>
+    <div class="mission-list" id="missionList"></div>
+  </section>
+  <section class="card challenge" id="challenge">
+    <div class="tag" id="missionTag">MISSION 01 · LINUX</div>
+    <h3 id="challengeTitle">Permission denied</h3>
+    <p id="challengeIntro">A script exists, but Linux refuses to run it. Diagnose the issue.</p>
+    <pre id="challengeCode">ls -l health_check.sh
+-rw-r--r-- 1 user developers 240 Oct 9 09:00 health_check.sh
+./health_check.sh
+Permission denied</pre>
+    <div class="options" id="options"></div>
+    <div class="actions"><button class="secondary" id="hintBtn">Show hint</button><button class="primary" id="submitBtn">Submit answer</button></div>
+    <div id="hint" class="hint hidden"></div>
+    <div id="feedback" aria-live="polite"></div>
+  </section>
+</div>
+<section class="card" style="margin-top:16px">
+  <div class="section-title"><h3>Portfolio project track</h3><span class="tag">Hands-on progression</span></div>
+  <div class="roadmap">
+    <div class="roadmap-item"><span class="dot">01</span><div><b>Linux Explorer</b><div class="muted small">Navigate files, inspect permissions, users, groups, and processes.</div></div></div>
+    <div class="roadmap-item"><span class="dot">02</span><div><b>Log Detective</b><div class="muted small">Use grep, pipes, sorting, and redirection to investigate sample server logs.</div></div></div>
+    <div class="roadmap-item"><span class="dot">03</span><div><b>System Health Monitor</b><div class="muted small">Write a Bash script that reports disk, memory, and process health.</div></div></div>
+    <div class="roadmap-item"><span class="dot">04</span><div><b>Network Troubleshooter</b><div class="muted small">Practice IP, DNS, ports, HTTP, and common diagnostic commands.</div></div></div>
+    <div class="roadmap-item"><span class="dot">05</span><div><b>Python Log Analyzer</b><div class="muted small">Parse log entries, count errors, handle edge cases, and test the program.</div></div></div>
+    <div class="roadmap-item"><span class="dot">06</span><div><b>SQL Analyst</b><div class="muted small">Use joins, aggregations, subqueries, and window functions on a dataset.</div></div></div>
+    <div class="roadmap-item"><span class="dot">07</span><div><b>Git + Testing</b><div class="muted small">Use branches, commits, debugging, tests, and clear README documentation.</div></div></div>
+    <div class="roadmap-item"><span class="dot">08</span><div><b>Cloud Server Capstone</b><div class="muted small">Plan a small deployment, secure access, inspect logs, and document cost and security.</div></div></div>
+  </div>
+</section>
+<div class="footer">CloudQuest is a learning tool, not a certification. Your progress is saved locally in this browser. Use the same browser/device to keep local progress, or export/import your save.</div>
+</div>
+<script>
+const missions = [
+{area:"LINUX",title:"Permission denied",intro:"A script exists, but Linux refuses to run it. Diagnose the issue.",code:"ls -l health_check.sh\\n-rw-r--r-- 1 user developers 240 Oct 9 09:00 health_check.sh\\n./health_check.sh\\nPermission denied",hint:"The first character after the file type represents owner permissions. Look for the execute bit: x.",question:"What's the most direct explanation?",options:["The file doesn't exist in the current directory.","The script lacks execute permission.","The file is owned by the wrong group, so Linux deleted it.","The server has run out of disk space."],correct:1,explain:"Correct. `rw-` means the owner can read and write, but cannot execute. If the script is intended to run as a program, `chmod u+x health_check.sh` adds execute permission for its owner."},
+{area:"LINUX",title:"Find the right directory",intro:"You're in /home/student and need to see what files and folders are here.",code:"pwd\\n# /home/student\\n# Goal: list files, including hidden files, in a readable format",hint:"The `ls` command lists directory contents. Combine the long-list and all-files flags.",question:"Which command best fits the goal?",options:["ls -la","cd ..","rm -rf *","chmod 777 ."],correct:0,explain:"Correct: `ls -la` shows a long listing and includes hidden entries. Avoid destructive commands like `rm -rf *`, especially when you're still confirming your location."},
+{area:"LINUX",title:"Read a log file",intro:"A service log has thousands of lines. You need to find lines containing the word ERROR.",code:"/var/log/app.log",hint:"Use `grep` to search text for a pattern.",question:"Which command searches for ERROR in the log?",options:["grep 'ERROR' /var/log/app.log","mkdir ERROR /var/log/app.log","chmod ERROR /var/log/app.log","ping /var/log/app.log"],correct:0,explain:"Correct: `grep 'ERROR' /var/log/app.log` prints matching lines. Later, combine it with pipes and `sort` or `uniq` to summarize recurring problems."},
+{area:"NETWORKING",title:"DNS detective",intro:"A laptop can reach an IP address but cannot open a site by its domain name.",code:"ping 1.1.1.1       # succeeds\\nping example.com   # fails to resolve",hint:"DNS translates domain names into IP addresses. Test name resolution directly.",question:"What should you investigate first?",options:["DNS resolution and resolver configuration","The monitor brightness","SQL table indexes","The file's execute bit"],correct:0,explain:"Correct: this pattern points toward DNS resolution. Tools such as `nslookup`, `dig`, and `resolvectl status` can help, depending on the system."},
+{area:"PYTHON",title:"Count error events",intro:"You have a list of log levels and need to count how many are ERROR.",code:"levels = ['INFO', 'ERROR', 'INFO', 'ERROR', 'WARN']",hint:"A list has a `.count(value)` method. You could also loop and increment a counter.",question:"What expression returns the number of ERROR entries?",options:["levels.count('ERROR')","levels['ERROR']","count(levels)","levels.error"],correct:0,explain:"Correct: `levels.count('ERROR')` returns 2. In interviews, also be ready to explain how you'd count many different levels in one pass using a dictionary."},
+{area:"SQL",title:"Group the results",intro:"A table named tickets has a `status` column. You need a count of tickets for each status.",code:"tickets(id, status, created_at)",hint:"Use GROUP BY to form one group per status and COUNT(*) to count rows.",question:"Which query is correct?",options:["SELECT status, COUNT(*) FROM tickets GROUP BY status;","SELECT COUNT(status) GROUP tickets;","SELECT status FROM tickets COUNT(*);","GROUP BY status SELECT * FROM tickets;"],correct:0,explain:"Correct. `GROUP BY status` creates groups and `COUNT(*)` counts rows in each group. In production queries, give the count a clear alias, such as `AS ticket_count`."},
+{area:"GIT + TESTING",title:"Save a change",intro:"You've edited a tracked file and want to record the change in Git history.",code:"git status\\n# modified: app.py",hint:"The usual workflow is stage, then commit.",question:"Which command records the staged changes with a message?",options:["git commit -m \"Add log parsing\"","git delete app.py","git push --delete app.py","git status --commit"],correct:0,explain:"Correct, assuming the intended changes have been staged with `git add app.py`. A commit records a snapshot locally; pushing is a separate step."},
+{area:"CLOUD",title:"Least privilege",intro:"A cloud app only needs to read objects from one storage bucket.",code:"Security review: app requires read-only access to one bucket.",hint:"Least privilege means granting only the access needed for the task.",question:"Which permission design is best?",options:["Grant read-only access scoped to the required bucket","Give administrator access to every service","Share a personal root account key","Disable all logging"],correct:0,explain:"Correct. Scope permissions to the specific resource and required actions. Avoid broad admin rights and shared credentials; keep logging and credential hygiene in the design."}
+];
+let state = {xp:0,completed:[],current:0,attempted:{}};
+const $ = id => document.getElementById(id);
+function load(){try{const saved=JSON.parse(localStorage.getItem('cloudquest-save-v1'));if(saved)state={...state,...saved}}catch(e){}}
+function save(){try{localStorage.setItem('cloudquest-save-v1',JSON.stringify(state))}catch(e){}}
+function renderStats(){ $('xp').textContent=state.xp;$('level').textContent=1+Math.floor(state.xp/300);$('cleared').textContent=`${state.completed.length} / ${missions.length}`;let p=Math.round(state.completed.length/missions.length*100);$('completion').textContent=p+'%';$('progressBar').style.width=p+'%';}
+function renderList(){const list=$('missionList');list.innerHTML='';missions.forEach((m,i)=>{const b=document.createElement('button');b.className='mission'+(i===state.current?' active':'')+(state.completed.includes(i)?' done':'');b.innerHTML=`<span class="number">${state.completed.includes(i)?'✓':String(i+1).padStart(2,'0')}</span><span><b>${m.title}</b><small>${m.area} · ${state.completed.includes(i)?'Cleared':'Challenge'}</small></span>`;b.onclick=()=>{state.current=i;save();render()};list.appendChild(b)})}
+function renderChallenge(){const m=missions[state.current];$('missionTag').textContent=`MISSION ${String(state.current+1).padStart(2,'0')} · ${m.area}`;$('challengeTitle').textContent=m.title;$('challengeIntro').textContent=m.intro;$('challengeCode').textContent=m.code.replace(/\\n/g,'\n');$('hint').textContent=m.hint;$('hint').classList.add('hidden');$('feedback').innerHTML='';$('options').innerHTML='';m.options.forEach((o,i)=>{const lab=document.createElement('label');lab.className='option';lab.innerHTML=`<input type="radio" name="answer" value="${i}"><span>${String.fromCharCode(65+i)}. ${o}</span>`;$('options').appendChild(lab)});if(state.completed.includes(state.current)){$('feedback').innerHTML=`<div class="feedback good"><b>Mission cleared</b><br>${m.explain}</div>`;$('submitBtn').textContent='Replay mission'}else $('submitBtn').textContent='Submit answer';}
+function render(){renderStats();renderList();renderChallenge()}
+$('hintBtn').onclick=()=>$('hint').classList.toggle('hidden');
+$('submitBtn').onclick=()=>{const m=missions[state.current];const selected=document.querySelector('input[name="answer"]:checked');if(!selected){$('feedback').innerHTML='<div class="feedback bad">Choose an answer first.</div>';return}const val=Number(selected.value);if(val===m.correct){if(!state.completed.includes(state.current)){state.completed.push(state.current);state.xp+=100;}state.attempted[state.current]=true;save();renderStats();renderList();$('feedback').innerHTML=`<div class="feedback good"><b>Correct! +${state.completed.includes(state.current)?'100':'0'} XP</b><br>${m.explain}<br><br><button class="primary" id="nextBtn">Next mission →</button></div>`;$('nextBtn').onclick=()=>{state.current=(state.current+1)%missions.length;save();render()};$('submitBtn').textContent='Mission cleared';}else{$('feedback').innerHTML=`<div class="feedback bad"><b>Not quite — try again.</b><br>Use the hint, revisit the concept, and choose another answer. No XP lost.</div>`}};
+$('continueBtn').onclick=()=>{let next=missions.findIndex((m,i)=>!state.completed.includes(i));state.current=next<0?0:next;save();render();$('challenge').scrollIntoView({behavior:'smooth',block:'start'})};
+$('resetBtn').onclick=()=>{if(confirm('Reset all CloudQuest progress on this browser?')){state={xp:0,completed:[],current:0,attempted:{}};save();render()}};
+load();render();
+</script>
+</body>
+</html>
